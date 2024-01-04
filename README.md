@@ -5,33 +5,41 @@
 * JAVA6 부터 호환됩니다. 
 
 ## 사용법
+### gradle 의존성 추가
+```groovy
+dependencies {
+    implementation 'io.github.clipsoft-rnd:LogExpressCore:0.10.6'
+    // slf4j 1.7.36 기반 LogExpressSlf4j 0.10.6
+    //implementation 'io.github.clipsoft-rnd:LogExpressSlf4j:0.10.6'
+}
+```
 ### 튜토리얼
 * 다음 예제와 같이 사용할 수 있습니다. <br/>
   ```java
-	import com.clipsoft.LogExpress.LogExpress;
-	.
-	.
-	// default Logger 에 로그를 기록합니다. 
-	LogExpress.trace("trace log");
-	LogExpress.debug("debug log");
-	LogExpress.info("info log");
-	LogExpress.warn("debug log");
-	LogExpress.error("error log");
-	// 아래 코드와 위 코드와 동일하게 동작합니다.
-	Logger baseLogger = LogExpress.newLogger();
-	baseLogger.trace("trace log");
-	baseLogger.debug("debug log");
-	baseLogger.info("info log");
-	baseLogger.warn("debug log");
-	baseLogger.error("error log");
-	// 임의의 marker 를 사용하여 로그를 기록할 수 있습니다.
-	// 설정에 따라서 marker별로 다른 파일에 기록할 수 있습니다. 
-	Logger markerLogger = LogExpress.newLogger("markerName");
-	markerLogger.trace("trace log");
-	markerLogger.debug("debug log");
-	markerLogger.info("info log");
-	markerLogger.warn("debug log");
-	markerLogger.error("error log");			
+  import com.clipsoft.LogExpress.LogExpress;
+  .
+  .
+  // default Logger 에 로그를 기록합니다. 
+  LogExpress.trace("trace log");
+  LogExpress.debug("debug log");
+  LogExpress.info("info log");
+  LogExpress.warn("debug log");
+  LogExpress.error("error log");
+  // 아래 코드와 위 코드와 동일하게 동작합니다.
+  Logger baseLogger = LogExpress.newLogger();
+  baseLogger.trace("trace log");
+  baseLogger.debug("debug log");
+  baseLogger.info("info log");
+  baseLogger.warn("debug log");
+  baseLogger.error("error log");
+  // 임의의 marker 를 사용하여 로그를 기록할 수 있습니다.
+  // 설정에 따라서 marker별로 다른 파일에 기록할 수 있습니다. 
+  Logger markerLogger = LogExpress.newLogger("markerName");
+  markerLogger.trace("trace log");
+  markerLogger.debug("debug log");
+  markerLogger.info("info log");
+  markerLogger.warn("debug log");
+  markerLogger.error("error log");			
   ```
 
 * 로거 만들기
